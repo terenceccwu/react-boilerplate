@@ -9,6 +9,7 @@ module.exports = {
   devServer: {
     inline: true,
     contentBase: './app',
+    disableHostCheck: true, // allow access through other IP
     port: 8100
   },
   module: {
