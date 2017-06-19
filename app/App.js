@@ -4,6 +4,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import ListItemLink from './baseComponents/ListItemLink'
 import { Button, Icon, Navbar } from 'react-materialize'
 
 // import styles
@@ -14,6 +15,11 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <Navbar brand='logo' right>
+            <ListItemLink exact to="/">Home</ListItemLink>
+            <ListItemLink to="/about">About</ListItemLink>
+          </Navbar>
+
           <div className="container">
             <Route exact path='/' component={Home} />
             <Route path='/about' component={About} />
